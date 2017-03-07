@@ -22,7 +22,7 @@ import com.vedika.app.service.UserService;
 public class HomeController {
 	
 	private UserService userService;
-	
+	/*Usp*/
 	@Autowired(required=true)
 	@Qualifier(value="userService")
 	public void setUserService(UserService us){
