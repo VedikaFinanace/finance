@@ -22,7 +22,7 @@ import com.vedika.app.service.UserService;
 public class HomeController {
 	
 	private UserService userService;
-	
+	/*Usp new*/
 	@Autowired(required=true)
 	@Qualifier(value="userService")
 	public void setUserService(UserService us){
@@ -32,7 +32,14 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home(Locale locale, Model model) {
 		
-		ModelAndView mav = new ModelAndView("home");
+		ModelAndView mav = new ModelAndView("index");
+		
+		return mav;
+	}
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView home() {
+		
+		ModelAndView mav = new ModelAndView("login");
 		
 		return mav;
 	}
